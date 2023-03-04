@@ -25,16 +25,16 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: ${myEnvName} environment build begins"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: conda update begins"
-# conda update --yes -name base conda
+conda update --yes -name base conda
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: conda update complete"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: environment cloning (base to ${myEnvName}) begins"
 
-# conda create --yes --clone base --name ${myEnvName}
+conda create --yes --clone base --name ${myEnvName}
 sleep 2
 
-# conda activate ${myEnvName}
+conda activate ${myEnvName}
 sleep 2
 
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: environment cloning (base to ${myEnvName}) complete"
@@ -44,7 +44,7 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda packages installation begins"
 for temppkg in "${pkgsCODA[@]}"
 do
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] conda installion begins: ${temppkg}"
-    # conda install --yes -c conda-forge ${temppkg} > stdout.conda-install.${temppkg} 2> stderr.conda-install.${temppkg}
+    conda install --yes -c conda-forge ${temppkg} > stdout.conda-install.${temppkg} 2> stderr.conda-install.${temppkg}
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] conda installion complete: ${temppkg}"
 done
 echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda packages installation complete"
@@ -54,7 +54,7 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: pypi packages installation begins"
 for temppkg in "${pkgsPyPI[@]}"
 do
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] pip installion begins: ${temppkg}"
-    # pip install --no-input ${temppkg} > stdout.pip-install.${temppkg} 2> stderr.pip-install.${temppkg}
+    pip install --no-input ${temppkg} > stdout.pip-install.${temppkg} 2> stderr.pip-install.${temppkg}
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] pip installion complete: ${temppkg}"
 done
 echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: pypi packages installation complete"
@@ -65,4 +65,3 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: ${myEnvName} environment build complet
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: run-main.sh complete"
 echo;echo
-
