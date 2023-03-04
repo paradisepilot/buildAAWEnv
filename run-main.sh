@@ -19,10 +19,10 @@ pkgsPyPI=( \
     )
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-echo;echo cloning base conda environment begins: `date`
-
 timeStamp=`date +"%Y%m%d%H%M%S"`
 myEnvName=envGeo${timeStamp}
+
+echo;echo environment cloning (base to ${myEnvName}) begins: `date`
 
 conda create --yes --clone base --name ${myEnvName}
 sleep 2
@@ -30,7 +30,7 @@ sleep 2
 conda activate ${myEnvName}
 sleep 2
 
-echo;echo cloning base conda environment complete: `date`
+echo;echo environment cloning (base to ${myEnvName}) complete: `date`
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo conda packages installation begins: `date`
