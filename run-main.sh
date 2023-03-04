@@ -31,7 +31,7 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda update complete"
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) begins"
 
-conda init --all --system
+conda init --all
 conda activate --no-stack envGeo20230304034628 # base
 sleep 2
 
