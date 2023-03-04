@@ -25,7 +25,7 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] ${myEnvName} environment build begins"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda update begins"
-conda update --yes --name base --channel conda-forge conda
+# conda update --yes --name base --channel conda-forge conda
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda update complete"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
