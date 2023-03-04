@@ -37,13 +37,18 @@ sleep 2
 conda create --yes --clone base --name ${myEnvName}
 sleep 2
 
-conda activate ${myEnvName}
+conda  activate ${myEnvName}
 sleep 2
 
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) complete"
+
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda env list"
 conda env list
 
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) complete"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] which python=`which python`"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] CONDA_DEFAULT_ENV=${CONDA_DEFAULT_ENV}"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] CONDA_PREFIX=${CONDA_PREFIX}"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda packages installation begins"
@@ -60,7 +65,7 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: pypi packages installation begins"
 for temppkg in "${pkgsPyPI[@]}"
 do
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] pip installion begins: ${temppkg}"
-    pip install --no-input ${temppkg} > stdout.pip-install.${temppkg} 2> stderr.pip-install.${temppkg}
+    ${CONDA_PREFIX}/bin/pip install --no-input ${temppkg} > stdout.pip-install.${temppkg} 2> stderr.pip-install.${temppkg}
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] pip installion complete: ${temppkg}"
 done
 echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: pypi packages installation complete"
