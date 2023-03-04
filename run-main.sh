@@ -31,6 +31,9 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda update complete"
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) begins"
 
+conda activate base
+sleep 2
+
 conda create --yes --clone base --name ${myEnvName}
 sleep 2
 
