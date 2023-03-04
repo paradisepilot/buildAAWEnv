@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo;echo starttime=`date`
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: run-main.sh begins"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 pkgsCODA=( \
@@ -21,7 +21,12 @@ pkgsPyPI=( \
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 timeStamp=`date +"%Y%m%d%H%M%S"`
 myEnvName=envGeo${timeStamp}
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: environment ${myEnvName} build begins"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: ${myEnvName} environment build begins"
+
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: conda update begins"
+# conda update --yes -name base conda
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: conda update complete"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: environment cloning (base to ${myEnvName}) begins"
@@ -55,5 +60,8 @@ done
 echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: pypi packages installation complete"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-# conda update --yes -name base conda
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: environment ${myEnvName} build complete"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: ${myEnvName} environment build complete"
+
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: run-main.sh complete"
+echo;echo
