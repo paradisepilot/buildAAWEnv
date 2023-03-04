@@ -70,7 +70,6 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: pypi packages installation begins"
 for temppkg in "${pkgsPyPI[@]}"
 do
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] pip installion begins: ${temppkg}"
-    echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] ls -l ${CONDA_PREFIX}"
     ${myEnvFolder}/bin/pip install --no-input ${temppkg} > stdout.pip-install.${temppkg} 2> stderr.pip-install.${temppkg}
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] pip installion complete: ${temppkg}"
 done
