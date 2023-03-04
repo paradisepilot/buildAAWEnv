@@ -6,16 +6,22 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] run-main.sh begins"
 pkgsCODA=( \
     "earthengine-api" \
     "google-cloud-sdk" \
-    "geemap" \
-    "rioxarray" \
-    "earthpy" \
     )
 
 pkgsPyPI=( \
-    "rHEALPixDGGS" \
-    "ease-grid" \
     "dggrid4py" \
+    "earthpy" \
+    "ease-grid" \
+    "geemap" \
+    "geoparquet" \
+    "georasters" \
     "pydggrid" \
+    "pyproj" \
+    "pystac" \
+    "rHEALPixDGGS" \
+    "rioxarray" \
+    "stac-geoparquet" \
+    "stackstac" \
     )
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
