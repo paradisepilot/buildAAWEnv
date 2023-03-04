@@ -31,15 +31,17 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda update complete"
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) begins"
 
-conda init --all
-conda activate --no-stack base
-sleep 2
+# conda init --all
+# conda activate --no-stack base
+# sleep 2
 
 # conda create --yes --clone base --name ${myEnvName}
 sleep 2
 
 # conda  activate --no-stack ${myEnvName}
 sleep 2
+
+myEnvFolder=`conda env list | egrep "${myEnvName}" | awk "{print $2}"`
 
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) complete"
 
@@ -50,6 +52,7 @@ conda env list
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] which python=`which python`"
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] CONDA_DEFAULT_ENV=${CONDA_DEFAULT_ENV}"
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] CONDA_PREFIX=${CONDA_PREFIX}"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] myEnvFolder=${myEnvFolder}"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda packages installation begins"
@@ -67,8 +70,8 @@ for temppkg in "${pkgsPyPI[@]}"
 do
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] pip installion begins: ${temppkg}"
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] ls -l ${CONDA_PREFIX}"
-    ls -l {CONDA_PREFIX}/bin/
-    # ${CONDA_PREFIX}/bin/pip install --no-input ${temppkg} > stdout.pip-install.${temppkg} 2> stderr.pip-install.${temppkg}
+    ls -l ${myEnvFolder}/bin/
+    # ${myEnvFolder}/bin/pip install --no-input ${temppkg} > stdout.pip-install.${temppkg} 2> stderr.pip-install.${temppkg}
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] pip installion complete: ${temppkg}"
 done
 echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: pypi packages installation complete"
