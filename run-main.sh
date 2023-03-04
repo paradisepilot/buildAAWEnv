@@ -52,7 +52,7 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda packages installation begins"
 for temppkg in "${pkgsCODA[@]}"
 do
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] conda installion begins: ${temppkg}"
-    # conda install --yes --name ${myEnvName} --channel conda-forge ${temppkg} > stdout.conda-install.${temppkg} 2> stderr.conda-install.${temppkg}
+    conda install --yes --name ${myEnvName} --channel conda-forge ${temppkg} > stdout.conda-install.${temppkg} 2> stderr.conda-install.${temppkg}
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] conda installion complete: ${temppkg}"
 done
 echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda packages installation complete"
@@ -63,7 +63,7 @@ for temppkg in "${pkgsPyPI[@]}"
 do
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] pip installion begins: ${temppkg}"
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] ls -l ${CONDA_PREFIX}"
-    # ${myEnvFolder}/bin/pip install --no-input ${temppkg} > stdout.pip-install.${temppkg} 2> stderr.pip-install.${temppkg}
+    ${myEnvFolder}/bin/pip install --no-input ${temppkg} > stdout.pip-install.${temppkg} 2> stderr.pip-install.${temppkg}
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] pip installion complete: ${temppkg}"
 done
 echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: pypi packages installation complete"
