@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: run-main.sh begins"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] run-main.sh begins"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 pkgsCODA=( \
@@ -21,15 +21,15 @@ pkgsPyPI=( \
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 timeStamp=`date +"%Y%m%d%H%M%S"`
 myEnvName=envGeo${timeStamp}
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: ${myEnvName} environment build begins"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] ${myEnvName} environment build begins"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: conda update begins"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda update begins"
 conda update --yes -name base conda
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: conda update complete"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda update complete"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: environment cloning (base to ${myEnvName}) begins"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) begins"
 
 conda create --yes --clone base --name ${myEnvName}
 sleep 2
@@ -37,7 +37,7 @@ sleep 2
 conda activate ${myEnvName}
 sleep 2
 
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: environment cloning (base to ${myEnvName}) complete"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) complete"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda packages installation begins"
@@ -60,8 +60,8 @@ done
 echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: pypi packages installation complete"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: ${myEnvName} environment build complete"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] ${myEnvName} environment build complete"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: run-main.sh complete"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] run-main.sh complete"
 echo;echo
