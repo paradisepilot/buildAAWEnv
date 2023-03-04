@@ -25,20 +25,16 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] ${myEnvName} environment build begins"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda update begins"
-# conda update --yes --name base --channel conda-forge conda
+conda update --yes --name base --channel conda-forge conda
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda update complete"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) begins"
 
-# conda init --all
-# conda activate --no-stack base
-# sleep 2
-
-# conda create --yes --clone base --name ${myEnvName}
+conda create --yes --clone base --name ${myEnvName}
 sleep 2
 
-# conda  activate --no-stack ${myEnvName}
+conda  activate --no-stack ${myEnvName}
 sleep 2
 
 myEnvFolder=`conda env list | egrep "${myEnvName}" | awk "{print $2}"`
@@ -59,7 +55,7 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda packages installation begins"
 for temppkg in "${pkgsCODA[@]}"
 do
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] conda installion begins: ${temppkg}"
-    # conda install --yes --name ${myEnvName} --channel conda-forge ${temppkg} > stdout.conda-install.${temppkg} 2> stderr.conda-install.${temppkg}
+    conda install --yes --name ${myEnvName} --channel conda-forge ${temppkg} > stdout.conda-install.${temppkg} 2> stderr.conda-install.${temppkg}
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] conda installion complete: ${temppkg}"
 done
 echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda packages installation complete"
@@ -70,8 +66,7 @@ for temppkg in "${pkgsPyPI[@]}"
 do
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] pip installion begins: ${temppkg}"
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] ls -l ${CONDA_PREFIX}"
-    ls -l ${myEnvFolder}/bin/
-    # ${myEnvFolder}/bin/pip install --no-input ${temppkg} > stdout.pip-install.${temppkg} 2> stderr.pip-install.${temppkg}
+    ${myEnvFolder}/bin/pip install --no-input ${temppkg} > stdout.pip-install.${temppkg} 2> stderr.pip-install.${temppkg}
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] pip installion complete: ${temppkg}"
 done
 echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: pypi packages installation complete"
