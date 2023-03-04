@@ -34,9 +34,6 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvNam
 conda create --yes --clone base --name ${myEnvName}
 sleep 2
 
-conda  activate --no-stack ${myEnvName}
-sleep 2
-
 myEnvFolder=`conda env list | egrep "${myEnvName}" | awk "{print $2}"`
 
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) complete"
@@ -45,10 +42,10 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvNam
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda env list"
 conda env list
 
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] myEnvFolder=${myEnvFolder}"
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] which python=`which python`"
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] CONDA_DEFAULT_ENV=${CONDA_DEFAULT_ENV}"
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] CONDA_PREFIX=${CONDA_PREFIX}"
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] myEnvFolder=${myEnvFolder}"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda packages installation begins"
