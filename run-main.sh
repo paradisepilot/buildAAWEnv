@@ -34,6 +34,9 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvNam
 conda create --yes --clone base --name ${myEnvName}
 sleep 2
 
+conda install --yes --name ${myEnvName} --channel anaconda pip
+sleep 2
+
 myEnvFolder=`conda env list | egrep "${myEnvName}" | sed 's/[ ][ ]*/ /g' | cut -d' ' -f2,2`
 
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) complete"
@@ -52,7 +55,7 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda packages installation begins"
 for temppkg in "${pkgsCODA[@]}"
 do
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] conda installion begins: ${temppkg}"
-    conda install --yes --name ${myEnvName} --channel conda-forge ${temppkg} > stdout.conda-install.${temppkg} 2> stderr.conda-install.${temppkg}
+    # conda install --yes --name ${myEnvName} --channel conda-forge ${temppkg} > stdout.conda-install.${temppkg} 2> stderr.conda-install.${temppkg}
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] conda installion complete: ${temppkg}"
 done
 echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda packages installation complete"
