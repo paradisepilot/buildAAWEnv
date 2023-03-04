@@ -40,6 +40,9 @@ sleep 2
 conda activate ${myEnvName}
 sleep 2
 
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda env list"
+conda env list
+
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) complete"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
