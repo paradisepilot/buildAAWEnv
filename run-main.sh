@@ -1,63 +1,57 @@
+#!/bin/bash
 
-echo starttime=`date`
+echo;echo starttime=`date`
 
-targetDIR=`pwd`
-echo targetDIR=${targetDIR}
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
+pkgsCODA=( \
+    "earthengine-api" \
+    "google-cloud-sdk" \
+    "geemap" \
+    "rioxarray" \
+    "earthpy" \
+    )
 
-conda create --clone base --name envTest 
+pkgsPyPI=( \
+    "rHEALPixDGGS" \
+    "ease-grid" \
+    "dggrid4py" \
+    "pydggrid" \
+    )
 
-conda install --yes -c conda-forge \
-        earthengine-api \
-        google-cloud-sdk \
-        geemap \
-        rioxarray \
-        earthpy
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
+echo;echo cloning base conda environment begins: `date`
 
-pip install rHEALPixDGGS
-pip install ease-grid
-pip install dggrid4py
-pip install pydggrid
+timeStamp=`date +"%Y%m%d%H%M%S"`
+myEnvName=envGeo${timeStamp}
 
-conda create  --yes -p ${targetDIR}
-conda install --yes -p ${targetDIR} -c conda-forge \
-        "r-arrow" \
-        "r-bayesplot" \
-        "r-Cairo" \
-        "r-EnvStats" \
-        "r-flexdashboard" \
-        "r-gdalutilities" \
-        "r-gdalutils" \
-        "r-gdata" \
-        "r-gdtools" \
-        "r-ggiraph" \
-        "r-ggpubr" \
-        "r-gifski" \
-        "r-jqr" \
-        "r-magick" \
-        "r-pdftools" \
-        "r-pkgdown" \
-        "r-R2jags" \
-        "r-rgdal" \
-        "r-ragg" \
-        "r-raster" \
-        "r-rastervis" \
-        "r-rgl" \
-        "r-rjags" \
-        "r-rJava" \
-        "r-rjson" \
-        "r-RMariaDB" \
-        "r-RMySQL" \
-        "r-rstan" \
-        "r-rstoolbox" \
-        "r-sf" \
-        "r-sp" \
-        "r-systemfonts" \
-        "r-terra" \
-        "r-textshaping" \
-        "r-tidyverse" \
-        "r-tiff" \
-        "r-vdiffr" > stdout.conda-install 2> stderr.conda-install
+conda create --yes --clone base --name ${myEnvName}
+sleep 2
 
+conda activate ${myEnvName}
+sleep 2
+
+echo;echo cloning base conda environment complete: `date`
+
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
+echo;echo conda packages installation begins: `date`
+for temppkg in "${pkgsCODA[@]}"
+do
+    echo conda installion begins: `date`: ${temppkg}
+    # conda install --yes -c conda-forge ${temppkg} > stdout.conda-install.${temppkg} 2> stderr.conda-install.${temppkg}
+    echo conda installion complete: `date`: ${temppkg}
+done
+echo;echo conda packages installation complete: `date`
+
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
+echo;echo pypi packages installation begins: `date`
+for temppkg in "${pkgsPyPI[@]}"
+do
+    echo pip installion begins: `date`: ${temppkg}
+    # pip install --no-input ${temppkg} > stdout.pip-install.${temppkg} 2> stderr.pip-install.${temppkg}
+    echo pip installion complete: `date`: ${temppkg}
+done
+echo;echo pypi packages installation complete: `date`
+
+### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 # conda update --yes -name base conda
 echo finishtime=`date`
-
