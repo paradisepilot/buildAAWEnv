@@ -15,6 +15,7 @@ pkgsPyPI=( \
     "geemap" \
     "geoparquet" \
     "georasters" \
+    "osgeo" \
     "pydggrid" \
     "pyproj" \
     "pystac" \
