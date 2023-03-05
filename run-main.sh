@@ -18,6 +18,7 @@ pkgsPyPI=( \
     "pydggrid" \
     "pyproj" \
     "pystac" \
+    "rastertodataframe" \
     "rHEALPixDGGS" \
     "rioxarray" \
     "stac-geoparquet" \
