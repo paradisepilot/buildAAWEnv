@@ -7,18 +7,14 @@ pkgsCONDA=( \
     "earthengine-api" \
     "google-cloud-sdk" \
     "stac-geoparquet" \
-    "geoparquet" \
     "georasters" \
     "geowombat" \
     "osmnx" \
     "pystac" \
     "rioxarray" \
+    "sklearn-xarray" \
     "stackstac" \
     # "pyarrow" \
-    )
-
-pkgsPHausamann=( \
-    "sklearn-xarray" \
     )
 
 pkgsPyPI=( \
@@ -26,6 +22,7 @@ pkgsPyPI=( \
     "earthpy" \
     "ease-grid" \
     "geemap" \
+    "geoparquet" \
     "pydggrid" \
     "rHEALPixDGGS" \
     )
@@ -72,20 +69,10 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda packages installation begins"
 for temppkg in "${pkgsCONDA[@]}"
 do
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] conda installion begins: ${temppkg}"
-    conda install --yes --name ${myEnvName} --channel conda-forge ${temppkg} > stdout.conda-install.${temppkg} 2> stderr.conda-install.${temppkg}
+    conda install --yes --name ${myEnvName} --channel conda-forge --channel phausamann ${temppkg} > stdout.conda-install.${temppkg} 2> stderr.conda-install.${temppkg}
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] conda installion complete: ${temppkg}"
 done
 echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda packages installation complete"
-
-### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] PHausamann conda packages installation begins"
-for temppkg in "${pkgsPHausamann[@]}"
-do
-    echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] conda installion begins: ${temppkg}"
-    conda install --yes --name ${myEnvName} --channel phausamann ${temppkg} > stdout.conda-install-PHausamann.${temppkg} 2> stderr.conda-install-PHausamann.${temppkg}
-    echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] conda installion complete: ${temppkg}"
-done
-echo "[`date +"%Y-%m-%d:%H-%M-%S"`] PHausamann conda packages installation complete"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: pypi packages installation begins"
