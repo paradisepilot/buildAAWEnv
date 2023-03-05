@@ -7,12 +7,12 @@ pkgsCODA=( \
     "earthengine-api" \
     "google-cloud-sdk" \
     "stac-geoparquet" \
+    "geoparquet" \
     "georasters" \
     "pystac" \
     "rioxarray" \
     "stackstac" \
     # "pyarrow" \
-    # "geoparquet" \
     )
 
 pkgsPyPI=( \
