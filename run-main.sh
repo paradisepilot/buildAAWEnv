@@ -9,6 +9,7 @@ pkgsCODA=( \
     "stac-geoparquet" \
     "geoparquet" \
     "georasters" \
+    "geowombat" \
     "pystac" \
     "rioxarray" \
     "stackstac" \
