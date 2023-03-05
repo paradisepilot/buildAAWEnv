@@ -6,10 +6,10 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] run-main.sh begins"
 pkgsCODA=( \
     "earthengine-api" \
     "google-cloud-sdk" \
+    "stac-geoparquet" \
     "georasters" \
     "pystac" \
     "rioxarray" \
-    "stac-geoparquet" \
     "stackstac" \
     # "pyarrow" \
     # "geoparquet" \
