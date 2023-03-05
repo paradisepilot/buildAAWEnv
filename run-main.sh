@@ -69,7 +69,13 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda packages installation begins"
 for temppkg in "${pkgsCONDA[@]}"
 do
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] conda installion begins: ${temppkg}"
-    conda install --yes --name ${myEnvName} --channel conda-forge --channel phausamann ${temppkg} > stdout.conda-install.${temppkg} 2> stderr.conda-install.${temppkg}
+    conda install --yes --name ${myEnvName} \
+        --channel conda-forge \
+        --channel "conda-forge/label/cf201901" \
+        --channel "conda-forge/label/cf202003" \
+        --channel "conda-forge/label/gcc7" \
+        --channel phausamann \
+        ${temppkg} > stdout.conda-install.${temppkg} 2> stderr.conda-install.${temppkg}
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] conda installion complete: ${temppkg}"
 done
 echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda packages installation complete"
