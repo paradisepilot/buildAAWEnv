@@ -15,6 +15,33 @@ pkgsCONDA=( \
     "sklearn-xarray" \
     "stackstac" \
     # "pyarrow" \
+    "r-rgdal" \
+    "r-gdalutilities" \
+    "r-gdalutils" \
+    "r-sf" \
+    "r-sp" \
+    "r-terra" \
+    "r-cairo" \
+    "r-cshapes" \
+    "r-dggridr" \
+    "r-gdistance" \
+    "r-geosphere" \
+    "r-ggmap" \
+    "r-ggspatial" \
+    "r-gstat" \
+    "r-openstreetmap" \
+    "r-proj4" \
+    "r-raster" \
+    "r-rastervis" \
+    "r-rgee" \
+    "r-rgooglemaps" \
+    "r-rts" \
+    "r-spacetime" \
+    "r-spatialeco" \
+    "r-spatstat" \
+    "r-spdep" \
+    "r-stars" \
+    "r-vapour" \
     )
 
 pkgsPyPI=( \
@@ -71,10 +98,14 @@ do
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] conda installion begins: ${temppkg}"
     conda install --yes --name ${myEnvName} \
         --channel conda-forge \
+        --channel "conda-forge/label/broken" \
         --channel "conda-forge/label/cf201901" \
         --channel "conda-forge/label/cf202003" \
         --channel "conda-forge/label/gcc7" \
+        --channel esri \
         --channel phausamann \
+        --channel r \
+        --channel vfonov \
         ${temppkg} > stdout.conda-install.${temppkg} 2> stderr.conda-install.${temppkg}
     echo "    [`date +"%Y-%m-%d:%H-%M-%S"`] conda installion complete: ${temppkg}"
 done
