@@ -8,7 +8,6 @@ pkgsCONDA=( \
     "google-cloud-sdk" \
     "stac-geoparquet" \
     "georasters" \
-    "geowombat" \
     "osmnx" \
     "pystac" \
     "rioxarray" \
@@ -22,34 +21,35 @@ pkgsCONDA=( \
     "r-sp" \
     "r-terra" \
     "r-cairo" \
-    "r-cshapes" \
     "r-dggridr" \
     "r-gdistance" \
     "r-geosphere" \
     "r-ggmap" \
     "r-ggspatial" \
     "r-gstat" \
-    "r-openstreetmap" \
     "r-proj4" \
     "r-raster" \
     "r-rastervis" \
     "r-rgee" \
     "r-rgooglemaps" \
-    "r-rts" \
     "r-spacetime" \
     "r-spatialeco" \
     "r-spatstat" \
     "r-spdep" \
     "r-stars" \
-    "r-vapour" \
+    # "r-cshapes" \
+    # "r-openstreetmap" \
+    # "r-rts" \
+    # "r-vapour" \
     )
 
 pkgsPyPI=( \
+    "geowombat" \
+    "geemap" \
+    "geoparquet" \
     "dggrid4py" \
     "earthpy" \
     "ease-grid" \
-    "geemap" \
-    "geoparquet" \
     "pydggrid" \
     "rHEALPixDGGS" \
     )
