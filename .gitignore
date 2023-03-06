@@ -19,6 +19,7 @@
 *.jpg
 *DELETEME*
 ARCHIVE
+00-ARCHIVE
 *BACKUP*
 *output*
 stderr.*
