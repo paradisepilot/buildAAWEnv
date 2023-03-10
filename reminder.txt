@@ -10,3 +10,4 @@ conda install --yes --name envTEST --channel conda-forge shapely
 
 pip install --no-input rHEALPixDGGS
 pip install --no-input easepy
+pip install --no-input ease-grid
