@@ -50,6 +50,7 @@ pkgsPyPI=( \
     "dggrid4py" \
     "earthpy" \
     "ease-grid" \
+    "easepy" \
     "pydggrid" \
     "rHEALPixDGGS" \
     )
