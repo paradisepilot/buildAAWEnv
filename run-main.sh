@@ -4,6 +4,8 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] run-main.sh begins"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 pkgsCONDA=( \
+    "gdal" \
+    "libgdal" \
     "earthengine-api" \
     "google-cloud-sdk" \
     "stac-geoparquet" \
