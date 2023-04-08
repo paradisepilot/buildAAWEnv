@@ -16,12 +16,12 @@ pkgsCONDA=( \
     "sklearn-xarray" \
     "stackstac" \
     # "pyarrow" \
+    "r-terra" \
     "r-rgdal" \
     "r-gdalutilities" \
     "r-gdalutils" \
     "r-sf" \
     "r-sp" \
-    "r-terra" \
     "r-cairo" \
     "r-dggridr" \
     "r-gdistance" \
