@@ -4,6 +4,7 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] run-main.sh begins"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 pkgsCONDA=( \
+    "conda=23.3.1" \
     "gdal=3.6.3" \
     "libgdal=3.6.3" \
     "earthengine-api" \
