@@ -26,6 +26,7 @@ pkgsCONDA=( \
     "stackstac" \
     # "pyarrow" \
     "r-base=4.2.3" \
+    "r-rsqlite=2.3.1" \
     "r-terra=1.7_23" \
     "r-rgdal=1.5_32" \
     "r-gdalutilities=1.2.4" \
