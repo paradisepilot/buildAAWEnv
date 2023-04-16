@@ -19,23 +19,10 @@ myEnvFolder=`conda env list | egrep "${myEnvName}" | sed 's/[ ][ ]*/ /g' | cut -
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] creation of new empty environment (${myEnvName}) complete"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda installation (to ${myEnvName}) begins"
-conda update --yes --name base --channel conda-forge conda=23.3.1
-sleep 2
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda installation (to ${myEnvName}) complete"
-
-### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] pip installation (to ${myEnvName}) begins"
-conda install --yes --name ${myEnvName} --channel conda-forge pip=20.0.2
-sleep 2
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] pip installation (to ${myEnvName}) complete"
-
-### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda env list"
 conda env list
 
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] myEnvFolder=${myEnvFolder}"
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] which python=`which python`"
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] CONDA_DEFAULT_ENV=${CONDA_DEFAULT_ENV}"
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] CONDA_PREFIX=${CONDA_PREFIX}"
 

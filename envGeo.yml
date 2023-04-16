@@ -7,6 +7,8 @@ channels:
   - conda-forge/label/cf202003
   - conda-forge/label/gcc7
 dependencies:
+  - conda=23.3.1
+  - pip=20.0.2
   - gdal=3.6.3
   - libgdal=3.6.3
   - python=3.11.3
