@@ -9,9 +9,10 @@ channels:
 dependencies:
   - gdal=3.6.3
   - libgdal=3.6.3
+  - python=3.11.3
+  - r-base=4.2.3
   - earthengine-api
   - google-cloud-sdk
-  - python=3.11.3
   - pandas=2.0.0
   - numpy=1.24.2
   - scipy=1.10.1
@@ -23,7 +24,6 @@ dependencies:
   - rioxarray
   - sklearn-xarray
   - stackstac
-  - r-base=4.2.3
   - r-terra=1.7_23
   - r-rgdal=1.5_32
   - r-gdalutilities=1.2.4
