@@ -9,6 +9,7 @@ pkgsCONDA=( \
     "gdal=3.6.3" \
     "geos=3.11.2" \
     "proj=9.2.0" \
+    "sqlite=3.40.0" \
     "libgdal=3.6.3" \
     "earthengine-api" \
     "google-cloud-sdk" \
@@ -23,7 +24,7 @@ pkgsCONDA=( \
     "pystac" \
     "rioxarray" \
     "sklearn-xarray" \
-    "stackstac" \
+    # "stackstac" \
     # "pyarrow" \
     "r-base=4.2.3" \
     "r-rsqlite=2.3.1" \
