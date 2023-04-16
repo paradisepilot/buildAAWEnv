@@ -71,28 +71,11 @@ myEnvName=envGeo${timeStamp}
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] ${myEnvName} environment build begins"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda update begins"
-conda update --yes --name base --channel conda-forge conda
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda update complete"
-
-### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) begins"
-
-# conda create --yes --clone base --name ${myEnvName}
 conda create --yes --name ${myEnvName}
 sleep 2
-
 myEnvFolder=`conda env list | egrep "${myEnvName}" | sed 's/[ ][ ]*/ /g' | cut -d' ' -f2,2`
-
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) complete"
-
-### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] pip installation (to ${myEnvName}) begins"
-
-conda install --yes --name ${myEnvName} --channel anaconda pip
-sleep 2
-
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] pip installation (to ${myEnvName}) complete"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda env list"
