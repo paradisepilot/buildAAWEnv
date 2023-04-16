@@ -11,6 +11,7 @@ pkgsCONDA=( \
     "proj=9.2.0" \
     "sqlite=3.40.0" \
     "libgdal=3.6.3" \
+    "libnetcdf=4.9.2" \
     "earthengine-api" \
     "google-cloud-sdk" \
     "python=3.11.3" \
@@ -27,6 +28,8 @@ pkgsCONDA=( \
     # "stackstac" \
     # "pyarrow" \
     "r-base=4.2.3" \
+    "r-rcpp=1.0.10" \
+    "r-ncdf4=1.21" \
     "r-rsqlite=2.3.1" \
     "r-rgdal=1.5_32" \
     "r-gdalutilities=1.2.4" \
