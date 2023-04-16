@@ -7,6 +7,8 @@ pkgsCONDA=( \
     "conda=23.3.1" \
     "pip=20.0.2" \
     "gdal=3.6.3" \
+    "geos=3.11.2" \
+    "proj=9.2.0" \
     "libgdal=3.6.3" \
     "earthengine-api" \
     "google-cloud-sdk" \
