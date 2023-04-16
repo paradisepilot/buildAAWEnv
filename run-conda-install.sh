@@ -10,6 +10,7 @@ pkgsCONDA=( \
     "geos=3.11.2" \
     "proj=9.2.0" \
     "sqlite=3.40.0" \
+    "cairo=1.16.0" \
     "libgdal=3.6.3" \
     "libnetcdf=4.9.2" \
     "earthengine-api" \
@@ -28,6 +29,7 @@ pkgsCONDA=( \
     # "stackstac" \
     # "pyarrow" \
     "r-base=4.2.3" \
+    "r-cairo=1.6_0" \
     "r-rcpp=1.0.10" \
     "r-ncdf4=1.21" \
     "r-rsqlite=2.3.1" \
@@ -38,7 +40,9 @@ pkgsCONDA=( \
     "r-sf=1.0-12" \
     "r-sp=1.6_0" \
     "r-terra=1.7_23" \
-    "r-cairo=1.6_0" \
+    "r-leaflet=2.0.2" \
+    "r-deldir=1.0_6" \
+    "r-tinytest=1.4.1" \
     "r-dggridr=3.0.0" \
     "r-gdistance=1.6" \
     "r-geosphere=1.5_18" \
