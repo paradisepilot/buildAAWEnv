@@ -28,12 +28,12 @@ pkgsCONDA=( \
     # "pyarrow" \
     "r-base=4.2.3" \
     "r-rsqlite=2.3.1" \
-    "r-terra=1.7_23" \
+    "r-sf=1.0-12" \
+    "r-sp=1.6_0" \
     "r-rgdal=1.5_32" \
     "r-gdalutilities=1.2.4" \
     "r-gdalutils=2.0.1.14" \
-    "r-sf=1.0-12" \
-    "r-sp=1.6_0" \
+    "r-terra=1.7_23" \
     "r-cairo=1.6_0" \
     "r-dggridr=3.0.0" \
     "r-gdistance=1.6" \
