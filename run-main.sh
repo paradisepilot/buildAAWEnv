@@ -8,6 +8,11 @@ pkgsCONDA=( \
     "libgdal=3.6.3" \
     "earthengine-api" \
     "google-cloud-sdk" \
+    "python=3.11.3" \
+    "pandas=2.0.0" \
+    "numpy=1.24.2" \
+    "scipy=1.10.1" \
+    "scikit-learn=1.2.2" \
     "stac-geoparquet" \
     "georasters" \
     "osmnx" \
@@ -16,6 +21,7 @@ pkgsCONDA=( \
     "sklearn-xarray" \
     "stackstac" \
     # "pyarrow" \
+    "r-base=4.2.3" \
     "r-terra=1.7_23" \
     "r-rgdal=1.5_32" \
     "r-gdalutilities=1.2.4" \
@@ -70,7 +76,8 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda update complete"
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) begins"
 
-conda create --yes --clone base --name ${myEnvName}
+# conda create --yes --clone base --name ${myEnvName}
+conda create --yes --name ${myEnvName}
 sleep 2
 
 myEnvFolder=`conda env list | egrep "${myEnvName}" | sed 's/[ ][ ]*/ /g' | cut -d' ' -f2,2`
