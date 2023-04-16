@@ -1,5 +1,4 @@
 channels:
-  - defaults
   - conda-forge
   - conda-forge/label/broken
   - conda-forge/label/cf201901
