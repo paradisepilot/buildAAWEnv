@@ -71,11 +71,11 @@ myEnvName=envGeo${timeStamp}
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] ${myEnvName} environment build begins"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) begins"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] creation of new empty environment (${myEnvName}) begins"
 conda create --yes --name ${myEnvName}
 sleep 2
 myEnvFolder=`conda env list | egrep "${myEnvName}" | sed 's/[ ][ ]*/ /g' | cut -d' ' -f2,2`
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] environment cloning (base to ${myEnvName}) complete"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] creation of new empty environment (${myEnvName}) complete"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] conda env list"
