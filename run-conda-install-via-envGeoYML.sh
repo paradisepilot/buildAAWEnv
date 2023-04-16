@@ -28,7 +28,7 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] CONDA_PREFIX=${CONDA_PREFIX}"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] package installation (to ${myEnvName}) begins"
-conda install --yes --name ${myEnvName} --file envGeo.yml
+conda env update --yes --name ${myEnvName} --file envGeo.yml
 sleep 2
 echo "[`date +"%Y-%m-%d:%H-%M-%S"`] package installation (to ${myEnvName}) complete"
 
