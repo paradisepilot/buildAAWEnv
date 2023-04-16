@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] run-main.sh begins"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] run-conda-install.sh begins"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
 pkgsCONDA=( \
@@ -120,5 +120,5 @@ echo "[`date +"%Y-%m-%d:%H-%M-%S"`]: pypi packages installation complete"
 echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] ${myEnvName} environment build complete"
 
 ### ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ###
-echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] run-main.sh complete"
+echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] run-conda-install.sh complete"
 echo;echo
