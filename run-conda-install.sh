@@ -39,7 +39,6 @@ pkgsCONDA=( \
     "r-rgdal=1.5_32" \
     "r-gdalutils=2.0.1.14" \
     "r-terra=1.7_23" \
-    "r-gdalutilities=1.2.4" \
     "r-leaflet=2.0.2" \
     "r-deldir=1.0_6" \
     "r-tinytest=1.4.1" \
@@ -59,6 +58,7 @@ pkgsCONDA=( \
     "r-spdep=1.2_8" \
     "r-stars=0.6_1" \
     # "r-cshapes" \
+    # "r-gdalutilities=1.2.4" \
     # "r-openstreetmap" \
     # "r-rts" \
     # "r-vapour" \
