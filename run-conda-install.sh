@@ -30,11 +30,13 @@ pkgsCONDA=( \
     "sklearn-xarray" \
     # "stackstac" \
     # "pyarrow" \
+    "r-arrow=12.0.0" \
     "r-cairo=1.6_0" \
     "r-rcpp=1.0.10" \
     "r-ncdf4=1.21" \
     "r-rsqlite=2.3.1" \
-    "r-sf=1.0-12" \
+    "r-sf=1.0_12" \
+    "r-lwgeom=0.2_11" \
     "r-sp=1.6_0" \
     "r-proj4=1.0_12" \
     "r-rgdal=1.5_32" \
@@ -42,10 +44,13 @@ pkgsCONDA=( \
     "r-leaflet=2.0.2" \
     "r-deldir=1.0_6" \
     "r-tinytest=1.4.1" \
+    "r-tidyverse=1.2.1" \
+    "r-dplyr" \
+    "r-ggplot2" \
+    "r-googledrive" \
     "r-dggridr=3.0.0" \
     "r-gdistance=1.6" \
     "r-geosphere=1.5_18" \
-    "r-googledrive=2.1.0" \
     "r-ggmap=2.6.1" \
     "r-ggspatial=1.1.8" \
     "r-gstat=2.1_1" \
