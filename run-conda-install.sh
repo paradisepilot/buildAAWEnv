@@ -6,6 +6,8 @@ echo;echo "[`date +"%Y-%m-%d:%H-%M-%S"`] run-conda-install.sh begins"
 pkgsCONDA=( \
     "conda=23.3.1" \
     "pip=20.0.2" \
+    "r-base=4.2.3" \
+    "r-terra=1.7_23" \
     "gdal=3.6.3" \
     "geos=3.11.2" \
     "proj=9.2.0" \
@@ -28,7 +30,6 @@ pkgsCONDA=( \
     "sklearn-xarray" \
     # "stackstac" \
     # "pyarrow" \
-    "r-base=4.2.3" \
     "r-cairo=1.6_0" \
     "r-rcpp=1.0.10" \
     "r-ncdf4=1.21" \
@@ -38,13 +39,13 @@ pkgsCONDA=( \
     "r-proj4=1.0_12" \
     "r-rgdal=1.5_32" \
     "r-gdalutils=2.0.1.14" \
-    "r-terra=1.7_23" \
     "r-leaflet=2.0.2" \
     "r-deldir=1.0_6" \
     "r-tinytest=1.4.1" \
     "r-dggridr=3.0.0" \
     "r-gdistance=1.6" \
     "r-geosphere=1.5_18" \
+    "r-googledrive=2.1.0" \
     "r-ggmap=2.6.1" \
     "r-ggspatial=1.1.8" \
     "r-gstat=2.1_1" \
