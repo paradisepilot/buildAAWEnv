@@ -12,7 +12,7 @@ pkgsCONDA=( \
     "gdal" \
     "geos" \
     "proj" \
-    "sqlite=3.40.0" \
+    "sqlite" \
     "cairo" \
     "libnetcdf" \
     "earthengine-api" \
@@ -30,40 +30,40 @@ pkgsCONDA=( \
     "sklearn-xarray" \
     # "stackstac" \
     # "pyarrow" \
-    "r-arrow=12.0.0" \
-    "r-cairo=1.6_0" \
-    "r-rcpp=1.0.10" \
-    "r-codetools" \
-    "r-ncdf4=1.21" \
-    "r-rsqlite=2.3.1" \
+    "r-arrow" \
     "r-sf=1.0_12" \
     "r-lwgeom=0.2_11" \
-    "r-sp=1.6_0" \
-    "r-proj4=1.0_12" \
-    "r-rgdal=1.5_32" \
-    "r-gdalutils=2.0.1.14" \
-    "r-leaflet=2.0.2" \
-    "r-deldir=1.0_6" \
-    "r-tinytest=1.4.1" \
+    "r-stars" \
+    "r-spdep" \
+    "r-sp" \
+    "r-proj4" \
+    "r-rgdal" \
+    "r-gdalutils" \
+    "r-cairo" \
+    "r-rcpp" \
+    "r-codetools" \
+    "r-ncdf4" \
+    "r-rsqlite" \
     "r-tidyverse=1.2.1" \
+    "r-leaflet" \
+    "r-deldir" \
+    "r-tinytest=" \
     "r-dplyr" \
     "r-ggplot2" \
     "r-googledrive" \
-    "r-dggridr=3.0.0" \
-    "r-gdistance=1.6" \
-    "r-geosphere=1.5_18" \
-    "r-ggmap=2.6.1" \
-    "r-ggspatial=1.1.8" \
-    "r-gstat=2.1_1" \
-    "r-raster=3.6_20" \
-    "r-rastervis=0.44" \
-    "r-rgee=1.1.5" \
-    "r-rgooglemaps=1.4.2" \
-    "r-spacetime=1.2_2" \
-    "r-spatialeco=2.0_0" \
-    "r-spatstat=3.0_3" \
-    "r-spdep=1.2_8" \
-    "r-stars=0.6_1" \
+    "r-dggridr" \
+    "r-gdistance" \
+    "r-geosphere" \
+    "r-ggmap" \
+    "r-ggspatial" \
+    "r-gstat" \
+    "r-raster" \
+    "r-rastervis" \
+    "r-rgee" \
+    "r-rgooglemaps" \
+    "r-spacetime" \
+    "r-spatialeco" \
+    "r-spatstat" \
     # "r-cshapes" \
     # "r-gdalutilities=1.2.4" \
     # "r-openstreetmap" \
@@ -72,8 +72,8 @@ pkgsCONDA=( \
     )
 
 pkgsPyPI=( \
-    "geowombat=2.1.6" \
-    "geemap=0.20.5" \
+    "geowombat" \
+    "geemap" \
     "geoparquet" \
     "dggrid4py" \
     "earthpy" \
