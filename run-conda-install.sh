@@ -33,6 +33,7 @@ pkgsCONDA=( \
     "r-arrow=12.0.0" \
     "r-cairo=1.6_0" \
     "r-rcpp=1.0.10" \
+    "r-codetools" \
     "r-ncdf4=1.21" \
     "r-rsqlite=2.3.1" \
     "r-sf=1.0_12" \
