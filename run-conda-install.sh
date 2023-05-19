@@ -8,20 +8,20 @@ pkgsCONDA=( \
     "pip=20.0.2" \
     "r-base=4.2.3" \
     "r-terra=1.7_23" \
-    # "gdal=3.6.3" \
-    # "geos=3.11.2" \
-    # "proj=9.2.0" \
+    "libgdal" \
+    "gdal" \
+    "geos" \
+    "proj" \
     "sqlite=3.40.0" \
-    # "cairo=1.16.0" \
-    # "libgdal=3.6.3" \
-    # "libnetcdf=4.9.2" \
+    "cairo" \
+    "libnetcdf" \
     "earthengine-api" \
     "google-cloud-sdk" \
     "python=3.11.3" \
-    "pandas=2.0.0" \
-    "numpy=1.24.2" \
-    "scipy=1.10.1" \
-    "scikit-learn=1.2.2" \
+    "scikit-learn" \
+    "pandas" \
+    "numpy" \
+    "scipy" \
     "stac-geoparquet" \
     "georasters" \
     "osmnx" \
