@@ -44,7 +44,7 @@ pkgsCONDA=( \
     "r-codetools" \
     "r-ncdf4" \
     "r-rsqlite" \
-    "r-tidyverse=1.2.1" \
+    "r-tidyverse" \
     "r-leaflet" \
     "r-deldir" \
     "r-tinytest=" \
